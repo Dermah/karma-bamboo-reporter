@@ -11,7 +11,7 @@
   },
   "repository":{
       "type": "git",
-      "url": "git://github.com/TheSharpieOne/karma-bamboo-reporter.git"
+      "url": "git://github.com/Dermah/karma-bamboo-reporter.git"
   },
   "keywords": [
     "karma-plugin",
