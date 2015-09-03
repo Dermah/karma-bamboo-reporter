@@ -35,10 +35,11 @@ var bambooReporter = function (baseReporterDecorator, config, formatError) {
               tests: (result.success + result.failed),
               passes: result.success,
               failures: result.failed,
-              duration: results.time },
-              failures: results.failures.map(clean),
-              passes: results.passes.map(clean),
-              skipped: results.skips.map(clean)
+              duration: results.time
+            },
+            failures: results.failures.map(clean),
+            passes: results.passes.map(clean),
+            skipped: results.skips.map(clean)
         };
 
         fs.writeFileSync(filename, JSON.stringify(obj, null, 2), 'utf-8');
