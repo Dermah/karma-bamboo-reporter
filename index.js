@@ -51,7 +51,7 @@ var bambooReporter = function (baseReporterDecorator, config, formatError) {
 
 function clean(test) {
     var o = {
-        fullTitle   : test.suite.shift[0],
+        fullTitle   : test.suite.shift(),
         title       : test.suite.concat(test.description).join(' '),
         duration    : test.time
     };
