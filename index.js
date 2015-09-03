@@ -31,7 +31,14 @@ var bambooReporter = function (baseReporterDecorator, config, formatError) {
 
     this.onRunComplete = function (browser, result) {
         var obj = {
-            stats: {tests: (result.success + result.failed), passes: result.success, failures: result.failed, duration: results.time }, failures: results.failures.map(clean), passes: results.passes.map(clean), skipped: results.skips.map(clean)
+            stats: {
+              tests: (result.success + result.failed),
+              passes: result.success,
+              failures: result.failed,
+              duration: results.time },
+              failures: results.failures.map(clean),
+              passes: results.passes.map(clean),
+              skipped: results.skips.map(clean)
         };
 
         fs.writeFileSync(filename, JSON.stringify(obj, null, 2), 'utf-8');
